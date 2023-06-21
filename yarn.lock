@@ -489,7 +489,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethereumjs/common@npm:^3.1.2":
+"@ethereumjs/common@npm:^3.1.2, @ethereumjs/common@npm:~3.1.2":
   version: 3.1.2
   resolution: "@ethereumjs/common@npm:3.1.2"
   dependencies:
@@ -528,7 +528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ethereumjs/tx@npm:^4.1.2":
+"@ethereumjs/tx@npm:^4.1.1, @ethereumjs/tx@npm:^4.1.2":
   version: 4.1.2
   resolution: "@ethereumjs/tx@npm:4.1.2"
   dependencies:
@@ -1381,7 +1381,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@metamask/browser-passworder@npm:^4.0.2":
+"@metamask/browser-passworder@npm:^4.1.0":
   version: 4.1.0
   resolution: "@metamask/browser-passworder@npm:4.1.0"
   checksum: f1edb3b75594b8e8d075b3134c9ce6c73573160eb48184ef722b9d96a5763db1e2e9acb166fc5c66c7c82936e134a02a3fb4c0022ca9a948857a30181cb84d7e
@@ -1619,34 +1619,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@metamask/eth-keyring-controller@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "@metamask/eth-keyring-controller@npm:10.0.1"
+"@metamask/eth-keyring-controller@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "@metamask/eth-keyring-controller@npm:11.0.0"
   dependencies:
-    "@metamask/browser-passworder": ^4.0.2
+    "@ethereumjs/tx": ^4.1.1
+    "@metamask/browser-passworder": ^4.1.0
     "@metamask/eth-hd-keyring": ^6.0.0
-    "@metamask/eth-sig-util": 5.0.2
+    "@metamask/eth-sig-util": ^5.1.0
     "@metamask/eth-simple-keyring": ^5.0.0
+    "@metamask/utils": ^5.0.0
     obs-store: ^4.0.3
-  checksum: 61ce1c7de37c414b5917c004e61c4d1ca71465bd95a00c749408fdde2105cd9c15bedc32c7ce2f6f2f4ff31ca8b6c7056f3460ad91e3d24d9f43974d84b5603b
+  checksum: 84ade74649bf4020f9c06c985f8116f3cf080c96df201bbd919a6defcffd4824f50feb4b26a630e14d5d2d00fd74e0fde800e5165d63317e834a05a270733d8b
   languageName: node
   linkType: hard
 
-"@metamask/eth-sig-util@npm:5.0.2":
-  version: 5.0.2
-  resolution: "@metamask/eth-sig-util@npm:5.0.2"
-  dependencies:
-    "@ethereumjs/util": ^8.0.0
-    bn.js: ^4.11.8
-    ethereum-cryptography: ^1.1.2
-    ethjs-util: ^0.1.6
-    tweetnacl: ^1.0.3
-    tweetnacl-util: ^0.15.1
-  checksum: 1fbf1a0f5e654058f0219c9018dbebadf53036c9c3b47c8faf1cac54816532bb18996821736f526ac4e3d579afcaf502af4ad07e88158a50f015141858b08a90
-  languageName: node
-  linkType: hard
-
-"@metamask/eth-sig-util@npm:^5.0.0, @metamask/eth-sig-util@npm:^5.0.1, @metamask/eth-sig-util@npm:^5.0.2, @metamask/eth-sig-util@npm:^5.0.3":
+"@metamask/eth-sig-util@npm:^5.0.0, @metamask/eth-sig-util@npm:^5.0.1, @metamask/eth-sig-util@npm:^5.0.2":
   version: 5.0.3
   resolution: "@metamask/eth-sig-util@npm:5.0.3"
   dependencies:
@@ -1657,6 +1645,20 @@ __metadata:
     tweetnacl: ^1.0.3
     tweetnacl-util: ^0.15.1
   checksum: ba899271a3e1186266accf9b374f659ad43c7c96df28f111cdb85e4b75db3bbbb35a532ba0480d4674fa8cc3ec34fb89ce548a013c8e211bc62b6774a3335794
+  languageName: node
+  linkType: hard
+
+"@metamask/eth-sig-util@npm:^5.1.0":
+  version: 5.1.0
+  resolution: "@metamask/eth-sig-util@npm:5.1.0"
+  dependencies:
+    "@ethereumjs/util": ^8.0.6
+    bn.js: ^4.12.0
+    ethereum-cryptography: ^2.0.0
+    ethjs-util: ^0.1.6
+    tweetnacl: ^1.0.3
+    tweetnacl-util: ^0.15.1
+  checksum: c639e3bf91625faeb0230a6314f0b2d05e8f5e2989542d3e0eed1d21b7b286e1860f68629870fd7e568c1a599b3993c4210403fb4c84a625fb1e75ef676eab4f
   languageName: node
   linkType: hard
 
@@ -1708,18 +1710,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@metamask/keyring-controller@workspace:packages/keyring-controller"
   dependencies:
-    "@ethereumjs/common": ^2.6.1
-    "@ethereumjs/tx": ^3.5.2
+    "@ethereumjs/common": ~3.1.2
+    "@ethereumjs/tx": ^4.1.2
     "@keystonehq/bc-ur-registry-eth": ^0.9.0
     "@keystonehq/metamask-airgapped-keyring": ^0.6.1
     "@metamask/auto-changelog": ^3.1.0
     "@metamask/base-controller": "workspace:^"
     "@metamask/controller-utils": "workspace:^"
-    "@metamask/eth-keyring-controller": ^10.0.1
-    "@metamask/eth-sig-util": ^5.0.3
+    "@metamask/eth-keyring-controller": ^11.0.0
+    "@metamask/eth-sig-util": ^5.1.0
     "@metamask/message-manager": "workspace:^"
     "@metamask/preferences-controller": "workspace:^"
     "@metamask/scure-bip39": ^2.1.0
+    "@metamask/utils": ^6.1.0
     "@types/jest": ^27.4.1
     async-mutex: ^0.2.6
     deepmerge: ^4.2.2
@@ -2063,6 +2066,19 @@ __metadata:
     semver: ^7.3.8
     superstruct: ^1.0.3
   checksum: eca82e42911b2840deb4f32f0f215c5ffd14d22d68afbbe92d3180e920e509e310777b15eab29def3448f3535b66596ceb4c23666ec846adacc8e1bb093ff882
+  languageName: node
+  linkType: hard
+
+"@metamask/utils@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "@metamask/utils@npm:6.1.0"
+  dependencies:
+    "@ethereumjs/tx": ^4.1.2
+    "@types/debug": ^4.1.7
+    debug: ^4.3.4
+    semver: ^7.3.8
+    superstruct: ^1.0.3
+  checksum: d4eac3ce3c08674b8e9ef838d1661a5025690c6f266c26ebdb8e8d0da11fce786e54c326b5d9c6d33b262f37e7057e31d6545a3715613bd0a5bfa10e7755643a
   languageName: node
   linkType: hard
 
@@ -3289,7 +3305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bn.js@npm:^4.10.0, bn.js@npm:^4.11.0, bn.js@npm:^4.11.8, bn.js@npm:^4.11.9, bn.js@npm:^4.8.0":
+"bn.js@npm:^4.10.0, bn.js@npm:^4.11.0, bn.js@npm:^4.11.8, bn.js@npm:^4.11.9, bn.js@npm:^4.12.0, bn.js@npm:^4.8.0":
   version: 4.12.0
   resolution: "bn.js@npm:4.12.0"
   checksum: 39afb4f15f4ea537b55eaf1446c896af28ac948fdcf47171961475724d1bb65118cca49fa6e3d67706e4790955ec0e74de584e45c8f1ef89f46c812bee5b5a12
