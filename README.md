@@ -29,7 +29,8 @@ This repository houses the following packages:
 Or, in graph form [^fn1]:
 
 <!-- start dependency graph -->
-``` mermaid
+
+```mermaid
 %%{ init: { 'flowchart': { 'curve': 'bumpX' } } }%%
 graph LR;
 linkStyle default opacity:0.5
@@ -97,6 +98,7 @@ linkStyle default opacity:0.5
   transaction_controller --> controller_utils;
   transaction_controller --> network_controller;
 ```
+
 <!-- end dependency graph -->
 
 Refer to individual packages for usage instructions.

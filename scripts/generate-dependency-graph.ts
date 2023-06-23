@@ -136,7 +136,7 @@ async function updateReadme(newGraph: string) {
   const newReadmeContent = readmeContent.replace(
     new RegExp(`(${START_MARKER}).+(${END_MARKER})`, 'su'),
     (_match, startMarker, endMarker) =>
-      [startMarker, newGraph, endMarker].join('\n'),
+      [startMarker, '', newGraph, '', endMarker].join('\n'),
   );
   await fs.promises.writeFile(README_PATH, newReadmeContent);
 }
